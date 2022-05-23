@@ -31,3 +31,6 @@ def get_movies_list(list_type):
     response.raise_for_status()
     return response.json()
 
+def get_movie_images(movie_id):
+    response = requests.get(endpoint+f"{movie_id}/images", headers=headers)
+    return response.json()
